@@ -13,6 +13,9 @@ body {
     flex-direction: column;
     
 }
+nav{
+    text-align: center;
+}
 
 a {
     color: #236AB9;
