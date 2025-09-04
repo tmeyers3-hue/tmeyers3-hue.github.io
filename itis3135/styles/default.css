@@ -1,0 +1,37 @@
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 60%;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #D4E4F7;
+    color: #341C09;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+a {
+    color: #236AB9;
+}
+a::before {
+    content: "🔗 ";
+}
+
+h1, h2 {
+    font-family: Verdana, sans-serif;
+}
+
+
+
+img {
+    max-width: 40%;
+    height: auto;
+}
+
+footer {
+    margin-top: auto;
+}
