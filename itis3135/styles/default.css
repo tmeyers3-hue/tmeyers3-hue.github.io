@@ -73,3 +73,20 @@ footer {
     }
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px;
+}
+thead {
+    background-color: #236AB9;
+    color: white;
+    padding: 8px;
+    border: 2px solid #000;
+}
+td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+    background-color: whitesmoke;
+}
