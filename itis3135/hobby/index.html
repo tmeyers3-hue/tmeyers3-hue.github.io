@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinyl Collecting | Home</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        /* https://coolors.co/a2666f-f49390-f45866-c45ab3-631a86 */
+        html,
+        body {
+            min-height: 100vh;
+            background-color: #f49390;
+        }
+
+        main {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            
+            
+
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 3px solid #341C09;
+            border-radius: 2px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            padding: 15px;
+            color: #341C09;
+            margin-bottom: 20px;
+            background-color: #a2666f;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        nav {
+            text-align: center;
+        }
+
+        body {
+            margin: 0 auto;
+            max-width: 1000px;
+            width: 60%;
+            font-family: 'Trebuchet MS', sans-serif;
+            color: #341C09;
+            display: flex;
+            flex-direction: column;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 10 auto;
+        }
+
+        .content {
+            display: none;
+        }
+
+        [class~="content"][class~="active"] {
+            display: block;
+        }
+
+        table {
+            width: 85%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #341C09;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #a2666f;
+            color: #ffffff;
+        }
+
+
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+        }
+
+        a {
+            color: #631a86;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Vinyl Collecting</h1>
+        <nav>
+            <button class="nav-btn active" data-target="home">Home</button>
+            <button class="nav-btn" data-target="about">About</button>
+            <button class="nav-btn" data-target="times">Best Times</button>
+            <button class="nav-btn" data-target="locations">Locations</button>
+            <button class="nav-btn" data-target="how">How</button>
+            <button class="nav-btn" data-target="why">Why</button>
+            <button class="nav-btn" data-target="ai">AI Prompts</button>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="content active">
+            <h2>Home</h2>
+            <p>Welcome to my vinyl collecting hobby page. Here, you'll find information about my hobby of collecting
+                vinyl records, including the best times and locations to find them, as well as tips on how to start your
+                own collection.
+            </p>
+            <figure>
+                <img width="400" src="./images/vinyl_setup.png" alt="A collection of vinyl records">
+                <figcaption>An example setup.</figcaption>
+            </figure>
+            <p>Collecting vinyl records is a fun and more tactile way to experience music, and a hobby that allows you
+                to highlight your favorite artists and albums.
+                In the age of streaming, vinyl is a more intentional and personal form of engaging with music that I
+                really enjoy.
+            </p>
+        </section>
+
+        <section id="about" class="content">
+            <h2>About me</h2>
+            <p>I started collecting in 2022, when I found a vinyl for one of my favorite albums at the time: <i>Call Me If You Get Lost</i> by Tyler, The Creator
+                . From there, I started collecting my favorite albums as a way to play them in a more intentional context.
+            </p>
+            <figure>
+                <img width="400" src="./images/first_vinyl.png" alt="Call Me If You Get Lost Vinyl">
+                <figcaption>My first vinyl.</figcaption>
+            </figure>
+            <p>My current setup consists of: </p>
+            <ul>
+                <li><a href="https://www.bestbuy.com/product/insignia-bluetooth-stereo-turntable-black/J2FPJKYL84">Insignia - Bluetooth Stereo Turntable</a></li>
+                <li><a href="https://www.amazon.com/Logitech-Multi-Device-Stereo-Speaker/dp/B074KJ6JQW">Logitech Z207 Desktop Speakers</a></li>
+                <li><a href="https://a.co/d/f4nQvu8">Kiwi Ears Cadenza IEMs</a></li>
+            </ul>
+            <p>I would love to one day have a more quality setup, but for right now this setup sounds great to me and is very reliable. The Insignia Turntable came with a preamp installed, so that saved me a good chunk.</p>
+            <figure>
+                <img width = "400" src="./images/current.png" alt="My current setup">
+                <figcaption>My current setup. Currently Playing: <i>Original Musiquarium I</i> - Stevie Wonder</figcaption>
+            </figure>
+            <p>My current collection consists of around 40 records, spanning over half a century of music. I love music of all kinds, so I rarely leave a record store without something.</p>
+        </section>
+
+        <section id="times" class="content">
+            <h2>Best Times</h2>
+            <p>Most record stores restock on Fridays to coincide with new music releases. Checking online or in person on Friday or Saturday has worked the best for me in order to avoid records going out of stock.</p>
+            <p>For rarer releases or represses, Record Store Day is an annual stock of less common and anticipated records. Within the community, RSD acts similar to Black Friday, so being able to get anything is a challenge.</p>
+            <figure>
+                <img width="400" src="./images/rsd.png" alt="Malibu - Anderson .paak RSD 2023">
+                <figcaption>My only RSD vinyl</figcaption>
+            </figure>
+        </section>
+
+        <section id="locations" class="content">
+            <h2>Locations</h2>
+            <table>
+                <tr>
+                    <th>Store</th>
+                    <th>Location</th>
+                </tr>
+                <tr>
+                    <td>Pour House</td>
+                    <td>Raleigh, NC</td>
+                </tr>
+                <tr>
+                    <td>Lunchbox Records</td>
+                    <td>Charlotte, NC</td>
+                </tr>
+                <tr>
+                    <td>Vertigo Vinyl</td>
+                    <td>Online (Based in Georgia)</td>
+                </tr>
+            </table>
+            <p>These are the main record stores I look at frequently. Pour House is where most of my records come from, as they were about 10 minutes away from where I went to High School.
+                A good chunk of my older records come from random thrift stores.</p>
+            <figure>
+                <img src="./images/thrift.jpg" alt="thrift store vinyls">
+                <figcaption>Records from various thrift stores</figcaption>
+            </figure>
+        </section>
+
+        <section id="how" class="content">
+            <h2>How</h2>
+            <p>Starting a record collection requires some equipment up front, but doesn't have to be very expensive</p>
+            <p>You'll need:</p>
+            <ul>
+                <li>A turntable, which can be as cheap as $100</li>
+                <li>A preamp, which is included in most budget turntables</li>
+                <li>An amplifier, which can be skipped if you have active speakers</li>
+                <li>Speakers or Headphones. I have both, just in case everyone doesn't want to hear Math Metal.</li>
+            </ul>
+            <p>Then you'll need to find a record store. Lots of bookstores and retail stores carry popular vinyl  (Target, Barnes and Noble, Walmart), but supporting a local store is a preferred option. 
+                The location section has stores I frequent, but there are plenty of others out there.
+                Amazon is also a good choice for purchasing online, but shipping can damage records if not done properly.
+            </p>
+        </section>
+        
+        <section id="why" class="content">
+            <h2>Why</h2>
+            <p>Collecting vinyl is a good way to support smaller artists, maintain older records, and a chance to own your music.
+                The sound quality of vinyl is also appealing to me, as it has a different quality from high fidelity digital formats.
+                Vinyl also comes with large format album art, which serves as good decoration.
+            </p>
+            <figure>
+                <img width="400" src="./images/friends.png" alt="my friends">
+                <figcaption>My friends at the record store.</figcaption>
+            </figure>
+            <p>My friends got me into the hobby, so its been fun to talk to them about new music and what records we're looking for.</p>
+        </section>
+
+        <section id="ai" class="content">
+            <h2>AI Prompts</h2>
+            <p>I didn't need to use any AI prompts or images. I used my own pictures and googled how to do the one page setup.</p>
+        </section>
+        
+
+    </main>
+    <footer>
+        <p class="rights">Designed by <a href="meyerssoftware.online/index.html">Meyers Software</a> &copy; 2025</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
