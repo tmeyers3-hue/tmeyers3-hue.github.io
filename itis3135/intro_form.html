@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <style>
+        .content {
+            display: none;
+        }
+
+        [class~="content"][class~="active"] {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>ITIS3135 | Tristan Meyers' | Tedious Meerkat</h1>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>Intro Form</h2>
+        <h3 class="content">Please submit the form below</h3>
+        <form id="form" class="content active" action="submit_form.html" method="post">
+            <div>
+                <label for="firstName">First Name:</label>
+                <input value="Tristan" type="text" id="firstName" name="firstName" required>
+            </div>
+            <div>
+                <label for="middleName">Middle Name (or Initial):</label>
+                <input value="C" type="text" id="middleName" name="middleName">
+            </div>
+            <div>
+                <label for="nickname">Nickname/Preferred Name:</label>
+                <input type="text" id="nickname" name="nickname">
+            </div>
+            <div>
+                <label for="lastName">Last Name:</label>
+                <input value="Meyers" type="text" id="lastName" name="lastName" required>
+            </div>
+            <div>
+                <label for="ackStatement">Acknowledgment Statement:</label>
+                <textarea id="ackStatement" name="ackStatement"
+                    required>I acknowledge that the information I present here is public. T.C.M</textarea>
+            </div>
+            <div>
+                <label for="ackDate">Acknowledgement Date:</label>
+                <input value="2025-08-25" type="date" id="ackDate" name="ackDate" required>
+            </div>
+            <div>
+                <label for="mascotAdjective">Mascot Adjective:</label>
+                <input value="Tedious" type="text" id="mascotAdjective" name="mascotAdjective" required>
+            </div>
+            <div>
+                <label for="mascotAnimal">Mascot Animal:</label>
+                <input value="Meerkat" type="text" id="mascotAnimal" name="mascotAnimal" required>
+            </div>
+            <div>
+                <label for="divider">Divider:</label>
+                <input value="|" type="text" id="divider" name="divider" required>
+            </div>
+            <div>
+                <label for="picture">Picture:</label>
+                <input type="file" id="picture" name="picture" accept="image/*">
+            </div>
+            <div>
+                <label for="pictureCaption">Picture Caption:</label>
+                <input value="At my friends house, 2025" type="text" id="pictureCaption" name="pictureCaption" required>
+            </div>
+            <div>
+                <label for="personalStatement">Personal Statement:</label>
+                <textarea id="personalStatement" name="personalStatement"
+                    required>Hi, I'm Tristan. I am a junior computer science major with a cybersecurity concentration. I love music; I collect vinyl, play in the school’s orchestra, and I know how to play four different instruments. I much prefer winter to summer and I wear sweatshirts at all times of the year.</textarea>
+            </div>
+            <div>
+                <label for="personalBackground">Personal Background:</label>
+                <textarea id="personalBackground" name="personalBackground" rows="2"
+                    required>I was born in Knightdale, North Carolina, where I’ve lived since</textarea>
+            </div>
+            <div>
+                <label for="academicBackground">Academic Background:</label>
+                <textarea id="academicBackground" name="academicBackground" rows="2"
+                    required>Computer Science major with a Cybersecurity concentration, Junior</textarea>
+            </div>
+            <div>
+                <label for="professionalBackground">Professional Background:</label>
+                <textarea id="professionalBackground" name="professionalBackground" rows="2"
+                    required>I spent the past year working as a Mentor for the UTOP program at Charlotte, and this year I will be the program’s Student Coordinator</textarea>
+            </div>
+            <div>
+                <label for="primaryComputer">Primary Computer:</label>
+                <input value="M2 Macbook Air, MacOS, Laptop, at my apartment." type="text" id="primaryComputer"
+                    name="primaryComputer" required>
+            </div>
+            <div>
+                <label for="numCourses">Number of Courses:</label>
+                <select id="numCourses" name="numCourses" onchange="generateCourseFields()">
+                    <option selected value="">Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+            <div id="courseDetailsContainer">
+                <!-- Course details fields will be dynamically added here -->
+            </div>
+            <script>
+
+            </script>
+            <div>
+                <label for="quote">Quote:</label>
+                <textarea id="quote" name="quote"></textarea>
+            </div>
+            <div>
+                <label for="quoteAuthor">Quote Author:</label>
+                <input type="text" id="quoteAuthor" name="quoteAuthor">
+            </div>
+            <div>
+                <label for="funnyThing">Funny Thing:</label>
+                <textarea id="funnyThing" name="funnyThing">I can whistle with my tongue</textarea>
+            </div>
+            <div>
+                <label for="shareSomething">Something I would like to share:</label>
+                <textarea id="shareSomething" name="shareSomething"></textarea>
+            </div>
+            <div>
+                <label>5 Links:</label>
+                <div>
+                    <label for="link1">Link 1:</label>
+                    <input value="https://github.com/tmeyers3-hue" type="url" id="link1" name="link1" required>
+                </div>
+                <div>
+                    <label for="link2">Link 2:</label>
+                    <input value="https://tmeyers3-hue.github.io/" type="url" id="link2" name="link2" required>
+                </div>
+                <div>
+                    <label for="link3">Link 3:</label>
+                    <input value="https://www.linkedin.com/in/tristan-meyers-857536301/" type="url" id="link3"
+                        name="link3" required>
+                </div>
+                <div>
+                    <label for="link4">Link 4:</label>
+                    <input value="https://www.codecademy.com/profiles/tmeyers3" type="url" id="link4" name="link4"
+                        required>
+                </div>
+                <div>
+                    <label for="link5">Link 5:</label>
+                    <input value="https://www.freecodecamp.org/tmeyers3" type="url" id="link5" name="link5" required>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</Button>
+            <button type="button" id="clearBtn">Clear</button>
+        </form>
+
+        <div class="content" id="introduction">
+            <p id="acknowledgementDisplay"></p>
+            <script>
+                document.getElementById('acknowledgementDisplay').innerText =
+                    document.getElementById('ackStatement').value + ' ' + document.getElementById('ackDate').value;
+            </script>
+            <img id="headshot" src="images/DSC_0582.JPG" alt="At My Friends House, 2025">
+            <script>
+                document.getElementById('picture').addEventListener('change', function (event) {
+                    const file = event.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function (e) {
+                            document.getElementById('headshot').src = e.target.result;
+                        };
+                        reader.readAsDataURL(file);
+                    } else {
+                        document.getElementById('headshot').src = "images/DSC_0582.JPG";
+                    }
+                });
+            </script>
+            <p id="namedisplay">Tristan C. Meyers | Tedious Meerkat</p>
+            <script>
+                document.getElementById('namedisplay').innerText =
+                    document.getElementById('firstName').value + ' ' + document.getElementById('middleName').value + ' ' + document.getElementById('lastName').value + ' ' + document.getElementById('divider').value + ' ' + document.getElementById('mascotAdjective').value + ' ' + document.getElementById('mascotAnimal').value;
+            </script>
+            <p dir="ltr"><br></p>
+            <p dir="ltr" id="pictureCaptionDisplay"></p>
+            <script>
+                document.getElementById('pictureCaptionDisplay').innerText = document.getElementById('pictureCaption').value;
+            </script>
+            <p dir="ltr" id="personalStatementDisplay"></p>
+            <script>
+                document.getElementById('personalStatementDisplay').innerText = document.getElementById('personalStatement').value;
+            </script>
+            <ul>
+                <li aria-level="1" dir="ltr">
+                    <p role="presentation" dir="ltr" id="personalBackgroundDisplay"></p>
+                    <script>
+                        document.getElementById('personalBackgroundDisplay').innerText = "Personal Background: " + document.getElementById('personalBackground').value;
+                    </script>
+                </li>
+                <li aria-level="1" dir="ltr">
+                    <p role="presentation" dir="ltr" id="professionalBackgroundDisplay"></p>
+                    <script>
+                        document.getElementById('professionalBackgroundDisplay').innerText = "Professional Background: " + document.getElementById('professionalBackground').value;
+                    </script>
+                </li>
+                <li aria-level="1" dir="ltr">
+                    <p role="presentation" dir="ltr" id="academicBackgroundDisplay"></p>
+                    <script>
+                        document.getElementById('academicBackgroundDisplay').innerText = "Academic Background: " + document.getElementById('academicBackground').value;
+                    </script>
+                </li>
+                <li aria-level="1" dir="ltr">
+                    <p role="presentation" dir="ltr" id="primaryComputerDisplay"></p>
+                    <script>
+                        document.getElementById('primaryComputerDisplay').innerText = "Primary Computer: " + document.getElementById('primaryComputer').value;
+                    </script>
+                </li>
+                <li aria-level="1" dir="ltr">
+                    <p role="presentation" dir="ltr">Courses I’m taking &amp; Why:</p>
+                </li>
+                <ul id="courseDetailsDisplay">
+                    <script>
+                        const numCourses = parseInt(document.getElementById('numCourses').value);
+                        const courseDetailsContainer = document.getElementById('courseDetailsDisplay');
+                        courseDetailsContainer.innerHTML = ''; // Clear existing course details
+
+                        for (let i = 1; i <= numCourses; i++) {
+                            const department = document.getElementById(`department${i}`).value;
+                            const courseNumber = document.getElementById(`courseNumber${i}`).value;
+                            const courseName = document.getElementById(`courseName${i}`).value;
+                            const courseReason = document.getElementById(`courseReason${i}`).value;
+
+                            const li = document.createElement('li');
+                            li.innerHTML = `<p role="presentation" dir="ltr">${department} ${courseNumber} - ${courseName}: ${courseReason}</p>`;
+                            courseDetailsContainer.appendChild(li);
+                        }
+                    </script>
+                </ul>
+                <li aria-level="1" dir="ltr">
+                    <p role="presentation" dir="ltr" id="funnyThingDisplay"></p>
+                    <script>
+                        document.getElementById('funnyThingDisplay').innerText = "Funny/Interesting Item to Remember Me by: " + document.getElementById('funnyThing').value;
+                    </script>
+                </li>
+            </ul>
+        </div>
+        <script src="scripts/introduction.js"></script>
+
+
+
+    </main>
+</body>
+
+</html>
