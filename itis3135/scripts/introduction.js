@@ -32,12 +32,12 @@ document.getElementById('form').addEventListener('submit', function (event) {
         "Funny/Interesting Item to Remember Me by: " + document.getElementById('funnyThing').value;
 
     // Update course details
-    const numCoursesElement = document.getElementById('numCourses');
-    const numCourses = parseInt(numCoursesElement.value);
+    const numCourses = document.querySelectorAll('#class-container .class-entry').length;
     const courseDetailsContainer = document.getElementById('courseDetailsDisplay');
     courseDetailsContainer.innerHTML = ''; // Clear existing course details
 
-    if (isNaN(numCourses)) {
+    if (!numCourses) {
+        console.log(numCourses)
         // Default course details
         const defaultCourses = [
             { department: "ITIS3135", details: "Web Application and Development: Required, But I’m interested in having an idea of how webpages are made and work" },
@@ -54,10 +54,10 @@ document.getElementById('form').addEventListener('submit', function (event) {
         });
     } else {
         for (let i = 1; i <= numCourses; i++) {
-            const department = document.getElementById(`department${i}`).value;
-            const courseNumber = document.getElementById(`courseNumber${i}`).value;
-            const courseName = document.getElementById(`courseName${i}`).value;
-            const courseReason = document.getElementById(`courseReason${i}`).value;
+            const department = document.getElementById(`department_${i}`).value;
+            const courseNumber = document.getElementById(`code_${i}`).value;
+            const courseName = document.getElementById(`name_${i}`).value;
+            const courseReason = document.getElementById(`reason_${i}`).value;
 
             const li = document.createElement('li');
             li.innerHTML = `<p role="presentation" dir="ltr">${department} ${courseNumber} - ${courseName}: ${courseReason}</p>`;
