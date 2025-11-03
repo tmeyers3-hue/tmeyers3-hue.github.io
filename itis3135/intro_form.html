@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <style>
         .content {
             display: none;
@@ -252,8 +254,12 @@
             <button type="submit">Submit</button>
             <button type="reset">Reset</Button>
             <button type="button" id="clearBtn">Clear</button>
+            <button type="button" id="htmlBtn">Generate HTML</button>
+            <button type="button" id="jsonBtn">Generate JSON</button>
         </form>
 
+        <pre><code id="code-block" class="content language-html"></code></pre>
+        <pre><code id="json-block" class="content language-html"></code></pre>
         <div class="content" id="introduction">
             <p id="acknowledgementDisplay"></p>
             <script>
@@ -344,6 +350,8 @@
             </ul>
         </div>
         <script src="scripts/introduction.js"></script>
+        <script src="scripts/generate_html.js"></script>
+        <script src="scripts/generate_json.js"></script>
 
 
 
